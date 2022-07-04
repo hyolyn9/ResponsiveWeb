@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  font-family: 'Single Day', cursive;
+}
+
+a {
+  text-decoration: none;
+  color: #164c00;
+}
+
+li {
+  list-style: none;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #adc;
+  padding: 8px 12px;
+}
+
+.navbar .navbar__logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar .navbar__logo i {
+  color: #f35151;
+}
+
+.navbar .navbar__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 0;
+}
+
+.navbar .navbar__menu li {
+  padding: 8px 12px;
+}
+
+.navbar .navbar__menu li:hover {
+  background-color: #2f574a;
+  border-radius: 4px;
+}
+
+.navbar .navbar__menu li:hover a {
+  color: #f9f9f9;
+}
+
+.navbar .navbar__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 0;
+}
+
+.navbar .navbar__icons li {
+  padding: 8px 12px;
+}
+
+.navbar a.navbar__togleBtn {
+  display: none;
+  position: absolute;
+  right: 32px;
+  font-size: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 8px 12px;
+  }
+  .navbar .navbar__menu {
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  .navbar .navbar__menu li {
+    width: 100%;
+    text-align: center;
+  }
+  .navbar .navbar__icons {
+    display: none;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+  }
+  .navbar a.navbar__togleBtn {
+    display: block;
+  }
+  .navbar__menu.active,
+  .navbar__icons.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+/*# sourceMappingURL=style.css.map */

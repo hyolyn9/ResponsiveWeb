@@ -1,0 +1,97 @@
+body{
+    margin: 0;
+    font-family: 'Single Day', cursive;
+}
+a{
+    text-decoration: none;
+    color: rgb(22, 76, 0);
+}
+li{
+    list-style: none;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #adc;
+    padding: 8px 12px;
+
+    .navbar__logo{
+        font-size: 24px;
+        font-weight: bold;
+
+        i{
+            color: rgb(243, 81, 81);
+        }
+    }
+
+    .navbar__menu{
+        display: flex;
+        padding-left: 0;
+
+        li{
+          padding: 8px 12px;  
+        }
+        li:hover{
+            background-color: rgb(47, 87, 74);
+            
+            border-radius: 4px;
+            a{
+                color: rgb(249, 249, 249);
+            }
+        }
+    }
+
+    .navbar__icons{
+        display: flex;
+        padding-left: 0;
+
+        li{
+            padding: 8px 12px;
+        }
+    }
+    a.navbar__togleBtn{
+        display: none;
+        position: absolute;
+        right: 32px;
+        font-size: 24px;
+
+    }
+}
+
+
+@media screen and (max-width:768px){
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 12px;
+
+        .navbar__menu{
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+    
+            li{
+                width: 100%;
+                text-align: center;
+            }
+        }
+        .navbar__icons{
+            display: none;
+            justify-content: center;
+            width: 100%;
+        }
+        a.navbar__togleBtn{
+            display: block;
+        }
+    }
+
+    .navbar__menu.active,
+    .navbar__icons.active{
+        display: flex;
+    }
+    
+
+}
